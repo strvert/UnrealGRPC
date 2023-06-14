@@ -19,8 +19,6 @@ public class Grpc : ModuleRules
 		if (Target.Platform == UnrealTargetPlatform.Win64)
 		{
 			AddEngineThirdPartyPrivateStaticDependencies(Target, "zlib");
-			// PublicDependencyModuleNames.Add("SSL");
-
 			AddPublicLibrary(Target, Path.Combine(GrpcLibDir, "Release"));
 			PublicDefinitions.Add("__SIZEOF_INT128__=0");
 		}

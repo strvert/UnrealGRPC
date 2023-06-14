@@ -38,6 +38,8 @@
 #ifndef GOOGLE_PROTOBUF_GENERATED_MESSAGE_REFLECTION_H__
 #define GOOGLE_PROTOBUF_GENERATED_MESSAGE_REFLECTION_H__
 
+THIRD_PARTY_INCLUDES_START
+
 #include <string>
 
 #include "google/protobuf/stubs/common.h"
@@ -392,5 +394,7 @@ const std::string& NameOfDenseEnum(int v) {
 }  // namespace google
 
 #include "google/protobuf/port_undef.inc"
+
+THIRD_PARTY_INCLUDES_END
 
 #endif  // GOOGLE_PROTOBUF_GENERATED_MESSAGE_REFLECTION_H__

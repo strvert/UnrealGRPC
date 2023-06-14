@@ -38,6 +38,8 @@
 #ifndef GOOGLE_PROTOBUF_GENERATED_MESSAGE_UTIL_H__
 #define GOOGLE_PROTOBUF_GENERATED_MESSAGE_UTIL_H__
 
+THIRD_PARTY_INCLUDES_START
+
 #include <assert.h>
 
 #include <atomic>
@@ -260,5 +262,7 @@ inline void OnShutdownDestroyString(const std::string* ptr) {
 }  // namespace google
 
 #include "google/protobuf/port_undef.inc"
+
+THIRD_PARTY_INCLUDES_END
 
 #endif  // GOOGLE_PROTOBUF_GENERATED_MESSAGE_UTIL_H__
