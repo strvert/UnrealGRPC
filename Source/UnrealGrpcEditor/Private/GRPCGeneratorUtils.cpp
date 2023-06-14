@@ -56,7 +56,7 @@ void FGRPCGeneratorUtils::GenerateGRPCClientCode(
 		for (const FString& File : Files)
 		{
 			const FString& PublicFile = PublicCodeDirectory / FPaths::GetCleanFilename(File);
-			IFileManager::Get().Copy(*PublicFile, *File);
+			IFileManager::Get().Move(*PublicFile, *File);
 		}
 	}
 }
