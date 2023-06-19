@@ -21,6 +21,12 @@ public class Grpc : ModuleRules
 			AddEngineThirdPartyPrivateStaticDependencies(Target, "zlib");
 			AddPublicLibrary(Target, Path.Combine(GrpcLibDir, "Release"));
 			PublicDefinitions.Add("__SIZEOF_INT128__=0");
+			PublicDefinitions.Add("PROTOBUF_BUILTIN_ATOMIC=0");
+		}
+		else if (Target.Platform == UnrealTargetPlatform.Linux)
+		{
+			AddEngineThirdPartyPrivateStaticDependencies(Target, "zlib");
+			AddPublicLibrary(Target, Path.Combine(GrpcLibDir, "Release"));
 		}
 		else
 		{
@@ -37,7 +43,6 @@ public class Grpc : ModuleRules
 		PublicDefinitions.Add("GOOGLE_PROTOBUF_INTERNAL_DONATE_STEAL_INLINE=0");
 		PublicDefinitions.Add("GPR_FORBID_UNREACHABLE_CODE=0");
 		PublicDefinitions.Add("PROTOBUF_ENABLE_DEBUG_LOGGING_MAY_LEAK_PII=0");
-		PublicDefinitions.Add("PROTOBUF_BUILTIN_ATOMIC=0");
 	}
 
 	protected virtual bool AddPublicLibrary(ReadOnlyTargetRules Target, string libraryDir)
